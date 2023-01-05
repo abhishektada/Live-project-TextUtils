@@ -150,22 +150,22 @@ export default function TextForm(props) {
               onChange={handleOnChange}
             ></textarea>
           </div>
-          <button className="btn btn-primary mx-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}}onClick={handleUpClick}>
+          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}}onClick={handleUpClick}>
             Convert to upcase and Lwrcase
           </button>
-          <button className="btn btn-primary mx-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleLwClick}>
+          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleLwClick}>
             Convert to lowercase
           </button>
-          <button className="btn btn-primary mx-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCpClick}>
+          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCpClick}>
             Convert to Capitalize
           </button>
-          <button className="btn btn-primary mx-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleClClick}>
+          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleClClick}>
             Clear
           </button>
-          <button className="btn btn-primary mx-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCopy}>
+          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCopy}>
             Copy text
           </button>
-          <button className="btn btn-primary mx-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleExtraSpaces}>
+          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleExtraSpaces}>
             Remove extra space
           </button>
         </div>

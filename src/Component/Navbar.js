@@ -42,13 +42,13 @@ export default function Navbar(props) {
 
 
   return (
-    <nav className={`navbar navbar-expand-lg `} style={{color:props.colorMode.color,backgroundColor:props.colorMode.backgroundColor}}>
+    <nav className={"navbar navbar-expand-lg "} style={{color:props.colorMode.color,backgroundColor:props.colorMode.backgroundColor}}>
       <div className="container-fluid" >
         <a className="navbar-brand" href="#" style={{color:props.colorMode.color}}>
           {props.navbarName}
         </a>
         <button
-          className="navbar-toggler"
+          className=" navbar-toggler mx-3" style={{color:props.colorMode.color,backgroundColor:props.colorMode.backgroundColor}}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -56,7 +56,7 @@ export default function Navbar(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" style={{fontWeight:"600",fontSize:"25px",textAline:"center",lineHeight:"125%"}}>| | |</span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -86,10 +86,10 @@ export default function Navbar(props) {
               {props.btnModeText}
             </label>
           </div>
-          <div className="btn-group mx-3" role="group" aria-label="Basic example">
-              <button type="button" onClick={props.clickBlueBtn} className="btn btn-primary border-0 rounded-3" style={{backgroundColor:"rgb(7 57 131)"}}>Blue</button>
-              <button type="button" onClick={props.clickPurpleBtn} className="btn btn-primary border-0 mx-2 rounded-3"style={{backgroundColor:"rgb(147 87 203)"}}>Purple</button>
-              <button type="button" onClick={props.clickPinkBtn} className="btn btn-primary border-0 rounded-3"style={{backgroundColor:"rgb(208 46 211)"}}>Pink</button>
+          <div className="btn-group m-3" role="group" aria-label="Basic example">
+              <button type="button" onClick={props.clickBlueBtn} className="btn btn-primary mx-2 p-2.5  border-0 rounded-3" style={{backgroundColor:"rgb(7 57 131)"}}>Blue</button>
+              <button type="button" onClick={props.clickPurpleBtn} className="btn btn-primary border-0 mx-2 p-2.5 rounded-3"style={{backgroundColor:"rgb(147 87 203)"}}>Purple</button>
+              <button type="button" onClick={props.clickPinkBtn} className="btn btn-primary mx-2 p-2.5 border-0 rounded-3"style={{backgroundColor:"rgb(208 46 211)"}}>Pink</button>
           </div>
         </div>
       </div>
