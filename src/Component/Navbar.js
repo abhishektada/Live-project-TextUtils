@@ -44,9 +44,9 @@ export default function Navbar(props) {
   return (
     <nav className={"navbar navbar-expand-lg"} style={{color:props.colorMode.color,backgroundColor:props.colorMode.backgroundColor}}>
       <div className="container-fluid" >
-        <Link className="navbar-brand" to="/" style={{color:props.colorMode.color}}>
+        <a className="navbar-brand" href="#" style={{color:props.colorMode.color}}>
           {props.navbarName}
-        </Link>
+        </a>
         <button
           className=" navbar-toggler mx-3" style={{color:props.colorMode.color,backgroundColor:props.colorMode.backgroundColor}}
           type="button"
@@ -61,15 +61,15 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item active">
-              <Link className="nav-a active mx-2" aria-current="page" to="/" style={{color:props.colorMode.color,textDecoration:props.colorMode.textDeco}}>
+              <a className="nav-a active mx-2" aria-current="page" href="#" style={{color:props.colorMode.color,textDecoration:props.colorMode.textDeco}}>
                 {props.homeText}
-              </Link>
+              </a>
             </li>
-            <li className="nav-item active">
-              <Link className="nav-a mx-2" to="/about" style={{color:props.colorMode.color,textDecoration:props.colorMode.textDeco}}>
+            {/* <li className="nav-item active">
+              <a className="nav-a mx-2" href="#" style={{color:props.colorMode.color,textDecoration:props.colorMode.textDeco}}>
                 {props.aboutText}
-              </Link>
-            </li>
+              </a>
+            </li> */}
           </ul>
           <div className={"form-check form-switch" }>
             <input
