@@ -166,7 +166,7 @@ export default function TextForm(props) {
           </button>
           <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCopy}>
             Copy text
-          </button>np
+          </button>
           <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleExtraSpaces}>
             Remove extra space
           </button>
