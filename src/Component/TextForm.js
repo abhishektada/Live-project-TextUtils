@@ -59,8 +59,10 @@ export default function TextForm(props) {
 
   const handleCopy = () => {
     let text = document.getElementById("myBox");
-    text.select();
+    // text.select();
     navigator.clipboard.writeText(text.value);
+    // document.getSelection().removeAllRanges();
+
     textLength(
       "Enter text in text area.",
       "Text has been copied to clipboard."
@@ -123,13 +125,13 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
 
-  const calWord = (word) => {
-    let removeExtraSpaceOfWord = word.replace(/(^\S)|(\B[ ]+)/gm, "");
-    let removeLastSpaceOfWord = removeExtraSpaceOfWord.replace(/\s+$/gm, "");
-    let lengthWord = removeLastSpaceOfWord.split(" ").length;
+  // const calWord = (word) => {
+  //   let removeExtraSpaceOfWord = word.replace(/(^\S)|(\B[ ]+)/gm, "");
+  //   let removeLastSpaceOfWord = removeExtraSpaceOfWord.replace(/\s+$/gm, "");
+  //   let lengthWord = removeLastSpaceOfWord.split(" ").length;
 
-    return lengthWord;
-  };
+  //   return lengthWord;
+  // };
 
 
   return (
@@ -150,22 +152,22 @@ export default function TextForm(props) {
               onChange={handleOnChange}
             ></textarea>
           </div>
-          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}}onClick={handleUpClick}>
+          <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}}onClick={handleUpClick}>
             Convert to upcase and Lwrcase
           </button>
-          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleLwClick}>
+          <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleLwClick}>
             Convert to lowercase
           </button>
-          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCpClick}>
+          <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCpClick}>
             Convert to Capitalize
           </button>
-          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleClClick}>
+          <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleClClick}>
             Clear
           </button>
-          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCopy}>
+          <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleCopy}>
             Copy text
           </button>
-          <button className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleExtraSpaces}>
+          <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" style= {{backgroundColor:props.colorMode.btnColor,color:props.colorMode.btnTextColor,borderColor:props.colorMode.btnBorder}} onClick={handleExtraSpaces}>
             Remove extra space
           </button>
         </div>
@@ -173,12 +175,11 @@ export default function TextForm(props) {
           <h1>Your text summary</h1>
 
           <p>
-            {text.length > 0 ? calWord(text) : 0} words and {text.length}{" "}
-            characters
+            {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters
           </p>
-          <p>{0.008 * text.split(" ").length} Minutes to read</p>
+          <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Minutes to read</p>
           <h2>Preview</h2>
-          <p>{text.length > 0 ? text : "Enter the text in text area"}</p>
+          <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
         </div>
       </div>
     </>
