@@ -19,7 +19,7 @@ export default function TextForm(props) {
       setText(mfdTextToLw);
       textLength(
         "Enter text in text area.",
-        "Text has been Converted to Lower Case."
+        "Lower Case."
       );
       // props.showAlert("Text has been Converted to Lower Case." ,"success");
     } else if (check.toLowerCase() === text) {
@@ -27,7 +27,7 @@ export default function TextForm(props) {
       setText(mfdTextToUp);
       textLength(
         "Enter text in text area.",
-        "Text has been Converted to Upper Case."
+        "Upper Case."
       );
       // props.showAlert("Text has been Converted to Upper Case" ,"success");
     } else {
@@ -35,7 +35,7 @@ export default function TextForm(props) {
       setText(mfdTextToLw);
       textLength(
         "Enter text in text area.",
-        "Text has been Converted to Lo Case."
+        "Lower Case."
       );
       // props.showAlert("Text has been Converted to Lower Case." ,"success");
     }
@@ -45,7 +45,7 @@ export default function TextForm(props) {
     setText(mfdTextToLw);
     textLength(
       "Enter text in text area.",
-      "Text has been Converted to Lower Case."
+      "Lower Case."
     );
     // props.showAlert("Text has been Converted to Lower Case." ,"success");
   };
@@ -53,7 +53,7 @@ export default function TextForm(props) {
   const handleClClick = () => {
     let mfdTextToLw = "";
     setText(mfdTextToLw);
-    textLength("Enter text in text area.", "Text has been Cleared.");
+    textLength("Enter text in text area.", "Text Cleared.");
     // props.showAlert("Text has been Cleared.", "success");
   };
 
@@ -65,7 +65,7 @@ export default function TextForm(props) {
 
     textLength(
       "Enter text in text area.",
-      "Text has been copied to clipboard."
+      "Copied to clipboard."
     );
     // props.showAlert("Text has been copied to clipboard." ,"success");
   };
@@ -75,7 +75,7 @@ export default function TextForm(props) {
     setText(space1.join(" "));
     textLength(
       "Enter text in text area.",
-      "Extra Spaces has been Removed from text."
+      "Extra Spaces Removed."
     );
     // props.showAlert("Extra Spaces has been Removed from text." ,"success");
   };
@@ -107,7 +107,7 @@ export default function TextForm(props) {
       setText(capitalizeText);
       textLength(
         "Enter text in text area.",
-        "Text first letter has been Capitalized to Upper Case."
+        "Text Capitalized."
       );
     } catch (err) {
       if (text.length === 0) {
